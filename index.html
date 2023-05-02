@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable column</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//dobtco.github.io/jquery-resizable-columns/dist/jquery.resizableColumns.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/store.js/1.3.14/store.min.js"></script>
+    <script src="//dobtco.github.io/jquery-resizable-columns/dist/jquery.resizableColumns.js"></script>
+    <script src="./js/dragndrop.table.columns.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="grpChkBox">
+            <p>
+                <input type="checkbox" id="first_name" name="first_name" /> 
+                <label for="first_name">First Name</label>
+            </p>
+            <p>
+                <input type="checkbox" id="nickname" name="nickname" /> 
+                <label for="nickname">Nickname</label>
+            </p>
+            <p>
+                <input type="checkbox" id="last_name" name="last_name" /> 
+                <label for="last_name">Last Name</label>
+            </p>
+            <p>
+                <input type="checkbox" id="username" name="username" /> 
+                <label for="username">Username</label>
+            </p>
+        </div>
+        <table class="table table-bordered" data-resizable-columns-id="demo-table-v2">
+            <thead>
+                <tr class="dnd-moved">
+                    <th draggable="true" class="id" data-resizable-column-id="nr">#</th>
+                    <th draggable="true" class="first_name" data-resizable-column-id="first_name">First Name</th>
+                    <th draggable="true" class="nickname" data-resizable-column-id="nickname">Nickname</th>
+                    <th draggable="true" class="last_name" data-resizable-column-id="last_name">Last Name</th>
+                    <th draggable="true" class="username" data-resizable-column-id="username" id="username-column">Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="dnd-moved ui-sortable-handle">
+                    <td>1</td>
+                    <td class="first_name">Mark</td>
+                    <td class="nickname">Dude Meister</td>
+                    <td class="last_name">Otto</td>
+                    <td class="username">@mdo</td>
+                </tr>
+                <tr class="dnd-moved ui-sortable-handle">
+                    <td>2</td>
+                    <td class="first_name">Jacob</td>
+                    <td class="nickname">Barney von Matterhorn</td>
+                    <td class="last_name">Thornton</td>
+                    <td class="username">@fat</td>
+                </tr>
+                <tr class="dnd-moved ui-sortable-handle">
+                    <td>3</td>
+                    <td class="first_name">Larry the Bird</td>
+                    <td class="nickname">Unknown</td>
+                    <td class="last_name">What</td>
+                    <td class="username">@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
