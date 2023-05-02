@@ -1,3 +1,7 @@
+h2 {
+    text-align: center;
+    margin: 100px 0px;
+}
 table {
     table-layout: fixed;
     border-collapse: collapse;
